@@ -11,6 +11,7 @@ $ npm install rax-table --save
 ## Usage
 
 ```jsx
+import { createElement, useState } from 'rax';
 import Table from 'rax-table';
 
 const columns = [
@@ -45,11 +46,9 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
-class TableDemo extends Component {
-  render() {
-    return (
-      <Table width={750} height={640} columns={columns} dataSource={dataSource} />
-    );
-  }
-}
+export default (props) => {
+  return (
+    <Table width={750} height={640} columns={columns} dataSource={dataSource} />
+  );
+};
 ```
